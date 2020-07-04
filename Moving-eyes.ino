@@ -16,13 +16,19 @@ void loop() {
   Serial.print(command.indexOf("MOVER") >= 0);
   Serial.print("Received Data => ");
   Serial.println(command);
-  if (command.indexOf("MOVER") >= 0) {
+  if (command.indexOf("UP") >= 0) {
     Serial.println("Moving...");
     Up(servo);
+  }
+  if (command.indexOf("DOWN") >= 0) {
+    Serial.println("Moving...");
     Down(servo);
+  }
+  if (command.indexOf("CENTER") >= 0) {
+    Serial.println("Moving...");
     Center(servo);
   }
-  delay(100);
+//  delay(100);
 }
 
 
